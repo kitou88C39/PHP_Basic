@@ -55,10 +55,17 @@ echo '</pre>';
 //ループ処理(foreach)
 //①バリューのみ出力
 foreach($blog1 as $blog){
+    echo '<pre>';
     echo $blog;
+    echo '</pre>';
 }
 
 //②キーとバリュー出力
+foreach($blog2 as $key => $value){
+    echo '<pre>';
+    echo $key.$value;
+    echo '</pre>';
+}
 
 //多次元配列blogを展開するには？
 
