@@ -52,5 +52,14 @@ echo '<pre>';
 var_dump(blogs);
 echo '</pre>';
 
+//ループ処理(foreach)
+//①バリューのみ出力
+foreach($blog1 as $blog){
+    echo $blog;
+}
+
+//②キーとバリュー出力
+
+//多次元配列blogを展開するには？
 
 ?>
