@@ -5,9 +5,9 @@ $title = "PHPテスト";
 $content = "PHPテストです";
 $post_at = "2026/09/10";
 $tag = ['PHP', 'プログラミング'];
+$stautus =
 
 //定数
-
 const ID = 1;
 
 echo ID;
@@ -19,5 +19,8 @@ echo '<br>';
 echo $post_at;
 echo '<br>';
 print_r($tag);
+
+//データ型
+var_dump(ID);
 
 ?>
