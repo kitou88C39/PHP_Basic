@@ -2,8 +2,10 @@
 
 $blog = $_POST;
 
-foreach($blog as $value){
+foreach($blog2 as $key => $value) {
+    echo '<pre>';
     echo $value;
+    echo '</pre>';
 }
 
 ?>
