@@ -1,7 +1,7 @@
 <?php
 //変数
 //ブログのタイトル
-$title="PHPテスト";
-
+$title = "PHPテスト";
+echo $title
 
 ?>
