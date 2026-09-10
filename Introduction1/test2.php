@@ -41,8 +41,16 @@ $blog2 = [
 ];
 
 //配列の取り出し方
+echo '<pre>';
 var_dump(blog2);
+echo '</pre>';
 
+//多次元配列
+$blogs = [$blog1, $blog2];
+
+echo '<pre>';
+var_dump(blogs);
+echo '</pre>';
 
 
 ?>
