@@ -63,10 +63,17 @@ foreach($blog1 as $blog){
 //②キーとバリュー出力
 foreach($blog2 as $key => $value){
     echo '<pre>';
-    echo $key.$value;
+    echo $key.'='.$value;
     echo '</pre>';
 }
 
 //多次元配列blogを展開するには？
+foreach($blog as $blog){
+    foreach($blog as $value){
+        echo '<pre>';
+        echo $value;
+        echo '</pre>';
+    }
+}
 
 ?>
