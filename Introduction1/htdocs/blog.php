@@ -1,9 +1,7 @@
 <?php
 
-$name = $_POST['name'];
-$content = $_POST['content'];
+$blog = $_POST;
 
-echo "ブログタイトル：" . $name . "<br>";
-echo "ブログ本文：" . $content . "<br>";
+var_dump($blog);
 
 ?>
