@@ -18,5 +18,10 @@ $blog1 = array(
   'stautus' => $stautus
 );
 
+//配列の取り出し方
+echo $blog1['title'];
+
+//配列の中から添字orキーを指定する
+
 
 ?>
