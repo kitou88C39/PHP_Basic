@@ -2,36 +2,17 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>フォームサンプル</title>
+    <title>BlogForm</title>
 </head>
 <body>
-    <h1>お問い合わせフォーム</h1>
-    <form action="sample4.php" method="post">
-        <p>
-            名前：
-            <input type="text" name="name">
-        </p>
-        <p>
-            メールアドレス：
-            <input type="email" name="email">
-        </p>
-        <p>
-            年齢：
-            <input type="number" name="age">
-        </p>
-        <p>
-            性別：
-            <input type="radio" name="gender" value="男性"> 男性
-            <input type="radio" name="gender" value="女性"> 女性
-        </p>
-        <p>
-            お問い合わせ内容：
-            <br>
-            <textarea name="message" rows="5" cols="40"></textarea>
-        </p>
-        <p>
-            <input type="submit" value="送信">
-        </p>
+    <h2>ブログフォーム</h2>
+    <form action="blog.php" method="POST">
+        <p>ブログタイトル：</p>
+        <input type="text" name="name">
+        <p>ブログ本文：</p>
+        <textarea type="content" id="content" cols="30" rows="10"></textarea>
+        <input type="submit" value="送信">
     </form>
+
 </body>
 </html>
