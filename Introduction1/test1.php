@@ -11,9 +11,13 @@ $tag = ['PHP', 'プログラミング'];
 const ID = 1;
 
 echo ID;
+echo '<br>';
 echo $title;
+echo '<br>';
 echo $content;
+echo '<br>';
 echo $post_at;
-echo $tag;
+echo '<br>';
+print_r($tag);
 
 ?>
