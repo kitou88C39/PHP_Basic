@@ -3,9 +3,9 @@ $blog = $_POST;
 
 if($blog['publish_status'] === 'un_publish'){
     echo '公開中の記事がありません';
-} else {
-    echo '記事がありません';
+    return;
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -14,9 +14,9 @@ if($blog['publish_status'] === 'un_publish'){
     <title>BlogForm</title>
 </head>
 <body>
-    <h2><?php echo $blog['title']; ?></h2>
-    <p>投稿日：<?php echo $blog['post_at']; ?></p>
-    <p>カテゴリ：<?php echo $blog['category']; ?></p>
+    <h2><?php echo htmlspecialchars($blog['title'],ENT_QUOTES,'UTF-8'); ?></h2>
+    <p>投稿日：<?php echo htmlspecialchars($blog['post_at'],ENT_QUOTES,'UTF-8'); ?></p>
+    <p>カテゴリ：<?php echo htmlspecialchars($blog['category'],ENT_QUOTES,'UTF-8'); ?></p>
     <br>
     <p><?php echo $blog['content']; ?></p>
 </body>
