@@ -18,6 +18,6 @@ if($blog['publish_status'] === 'un_publish'){
     <p>投稿日：<?php echo htmlspecialchars($blog['post_at'],ENT_QUOTES,'UTF-8'); ?></p>
     <p>カテゴリ：<?php echo htmlspecialchars($blog['category'],ENT_QUOTES,'UTF-8'); ?></p>
     <br>
-    <p><?php echo $blog['content']; ?></p>
+    <p><?php echo htmlspecialchars($blog['content'],ENT_QUOTES,'UTF-8'); ?></p>
 </body>
 </html>
