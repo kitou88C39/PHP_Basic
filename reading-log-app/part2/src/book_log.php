@@ -1,5 +1,10 @@
 <?php
 
+echo '読書ログを登録してください'　. PHP_EOL;
+echo '書籍名:';
+echo fgets(STDIN);
+
+
 echo '書籍名:銀河鉄道の夜'　. PHP_EOL;
 echo '著者名:宮沢賢治'　. PHP_EOL;
 echo '読書状況:読書完了'　. PHP_EOL;
