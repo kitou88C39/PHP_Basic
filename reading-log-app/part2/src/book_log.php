@@ -1,5 +1,12 @@
 <?php
 
+echo '1. 読書ログを登録してください'　. PHP_EOL;
+echo '1. 読書ログを登録してください'　. PHP_EOL;
+echo '1. 読書ログを登録してください'　. PHP_EOL;
+
+
+
+
 echo '読書ログを登録してください'　. PHP_EOL;
 echo '書籍名:';
 $title = trim(fgets(STDIN));
