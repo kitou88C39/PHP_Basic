@@ -4,7 +4,12 @@ echo '読書ログを登録してください'　. PHP_EOL;
 echo '書籍名:';
 $title = trim(fgets(STDIN));
 
-echo '登録が完了しました'　. PHP_EOL　. PHP_EOL;
+echo '著者名:'　. PHP_EOL　. PHP_EOL;
+$author = trim(fgets(STDIN));
+
+echo '読書状況(未読、読んでる、読了):';
+$status = trim(fgets(STDIN));
+
 
 echo '読書ログを登録します'　. PHP_EOL;
 echo '書籍名:' . $title　. PHP_EOL;
