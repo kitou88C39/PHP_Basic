@@ -7,12 +7,13 @@ echo '番号を選択してください(1,2,9)　:'　.
 PHP_EOL;
 $num = trim(fgets(STDIN));
 
-if ($num === '1'){
+if ($num === '1') {
     //読書ログを登録する
-}　elseof ($num === '2'){
+}　elseif ($num === '2') {
     //読書ログを表示する
+} elseif ($num === '9') {
+    //アプリケーションを終了する
 }
-
 
 
 echo '読書ログを登録してください'　. PHP_EOL;
