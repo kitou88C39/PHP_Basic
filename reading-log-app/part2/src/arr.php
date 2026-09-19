@@ -1,4 +1,6 @@
 <?php
 
 $comics = ['A','B','C'];
-var_exprt(comics);
+
+$comics[] = 'D';
+var_exprt($comics);
