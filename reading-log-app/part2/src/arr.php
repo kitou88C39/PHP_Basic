@@ -3,4 +3,5 @@
 $comics = ['A','B','C'];
 
 $comics[] = 'D';
-var_exprt($comics);
+
+echo $comics[2] .PHP_EOL;
