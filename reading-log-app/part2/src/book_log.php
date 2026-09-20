@@ -31,9 +31,9 @@ if ($num === '1') {
     'summary' => $summary,
     ];
 
-
+    echo '登録が完了しました'　. PHP_EOL　. PHP_EOL;
 }　elseif ($num === '2') {
-    //読書ログを表示する
+    echo '登録されている読書ログを表示します'　. PHP_EOL;
 } elseif ($num === '9') {
     //アプリケーションを終了する
 }
