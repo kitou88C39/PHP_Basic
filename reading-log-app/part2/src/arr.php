@@ -11,3 +11,14 @@ forearch ($numbers as $number){
     //繰り返したい処理
     echo $numbers * 2 . PHP_EOL;
 }
+
+$currencies = [
+  'japan' => 'yen',
+  'us' => 'dollar',
+  'england' => 'pound',
+];
+
+forearch ($numbers as $number){
+    //繰り返したい処理
+    echo $numbers * 2 . PHP_EOL;
+}
