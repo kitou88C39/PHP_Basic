@@ -18,7 +18,6 @@ $currencies = [
   'england' => 'pound',
 ];
 
-forearch ($numbers as $number){
-    //繰り返したい処理
-    echo $numbers * 2 . PHP_EOL;
+forearch ($currencies as $country => $currency){
+    echo $country . ':' . $currency . PHP_EOL;
 }
