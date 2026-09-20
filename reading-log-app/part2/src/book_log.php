@@ -22,6 +22,16 @@ if ($num === '1') {
 
     echo '感想:';
     $summary = trim(fgets(STDIN));
+
+    $reviews[] = [
+    'title' => $title,
+    'author' => $author,
+    'status' => $status,
+    'score' => $score,
+    'summary' => $summary,
+    ];
+
+
 }　elseif ($num === '2') {
     //読書ログを表示する
 } elseif ($num === '9') {
