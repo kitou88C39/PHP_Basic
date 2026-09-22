@@ -19,7 +19,9 @@ function createReview()
         echo '感想:';
         $summary = trim(fgets(STDIN));
 
-        $reviews[] = [
+        echo '登録が完了しました' . PHP_EOL . PHP_EOL;
+        
+        return = [
         'title' => $title,
         'author' => $author,
         'status' => $status,
@@ -27,5 +29,4 @@ function createReview()
         'summary' => $summary,
         ];
 
-        echo '登録が完了しました' . PHP_EOL . PHP_EOL;
   }
