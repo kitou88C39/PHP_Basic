@@ -20,7 +20,7 @@ function createReview()
         $summary = trim(fgets(STDIN));
 
         echo '登録が完了しました' . PHP_EOL . PHP_EOL;
-        
+
         return = [
         'title' => $title,
         'author' => $author,
@@ -30,3 +30,15 @@ function createReview()
         ];
 
   }
+
+  $reviews = [];
+
+  while (true) {
+    echo '1. 読書ログを登録' . PHP_EOL;
+    echo '2. 読書ログを表示' . PHP_EOL;
+    echo '9. アプリケーションを終了' . PHP_EOL;
+    echo '番号を選択してください(1,2,9) :';
+    $num = trim(fgets(STDIN));
+
+    if ($num === '1') {
+        $reviews[] = createReview();
