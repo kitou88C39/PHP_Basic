@@ -15,6 +15,8 @@ while (true) {
     $num = trim(fgets(STDIN));
 
     if ($num === '1') {
+        $reviews[] = createReview();
+
         echo '読書ログを登録してください' . PHP_EOL;
         echo '書籍名:';
         $title = trim(fgets(STDIN));
@@ -44,6 +46,8 @@ while (true) {
         echo '登録されている読書ログを表示します' . PHP_EOL;
     } elseif ($num === '9') {
         //アプリケーションを終了する
+        echo '書籍名:' .$reviews['title'] .
+        PHP_EOL;
     }
 
 
