@@ -47,8 +47,19 @@ function createReview()
         foreach ($reviews as $review){
           echo '書籍名:' . $review['title'] .
           PHP_EOL;
-        }
-
+          echo '著者名:' . $review['author'] .
+          PHP_EOL;
+          echo '読書状況:' . $review['status'] .
+          PHP_EOL;
+          echo '評価:' . $review['score'] .
+          PHP_EOL;
+          echo '感想:' . $review['summary'] .
+          PHP_EOL;
+        
+    }
+  }
+}
+  
 
 
 
