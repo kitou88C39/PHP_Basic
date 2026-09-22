@@ -42,3 +42,13 @@ function createReview()
 
     if ($num === '1') {
         $reviews[] = createReview();
+    } elseif ($num === '2') {
+        echo '登録されている読書ログを表示します' . PHP_EOL;
+        foreach ($reviews as $review){
+          echo '書籍名:' . $review['title'] .
+          PHP_EOL;
+        }
+
+
+
+
