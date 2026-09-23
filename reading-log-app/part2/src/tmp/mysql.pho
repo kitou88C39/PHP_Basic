@@ -1,4 +1,7 @@
 <?php
 
-$link = mysqli_connect('db', 'book_log', 'pass', 'book_log');
-echo 'データベースに接続できました' . PHP_EOL; 
+$link = mysqli_connect('db', 'book_log',
+'pass', 'book_log');
+
+echo 'データベースに接続できました' . PHP_EOL;
+mysqli_close($link);
