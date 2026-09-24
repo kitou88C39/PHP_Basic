@@ -11,6 +11,11 @@ if (!$link) {
 echo 'データベースに接続できました' . PHP_EOL;
 
 $sql = <<<EOT
+INSERT INTO companies(
+
+) VALUES (
+
+)
 EOT;
 
 mysqli_query($linkm $sql);
