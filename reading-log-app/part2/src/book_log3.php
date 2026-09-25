@@ -38,3 +38,17 @@ INSERT INTO reviews(
     "{$score}",
     "{$summary}"
 )
+EOT;
+
+$result = mysqli_query($link, $sql);
+
+if ($result) {
+    echo 'データベースに追加しました' . PHP_EOL;
+} else {
+    echo 'Error: データベースへの追加に失敗しました' . PHP_EOL;
+    echo 'Debugging error: ' . mysqli_error($link) . PHP_EOL;
+}
+
+mysqli_close($link);
+
+echo 'データベースとの接続を切断しました' . PHP_EOL;
