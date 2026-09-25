@@ -23,3 +23,18 @@ function createReview()
   echo '書籍名:' . $title . PHP_EOL;
 
 }
+
+$sql = <<<EOT
+INSERT INTO reviews(
+    title,
+    author,
+    status,
+    score,
+    summary
+) VALUES (
+    "{$title}",
+    "{$author}",
+    "{$status}",
+    "{$score}",
+    "{$summary}"
+)
