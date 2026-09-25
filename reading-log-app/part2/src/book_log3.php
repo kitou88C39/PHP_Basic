@@ -19,12 +19,9 @@ function createReview()
   echo '感想:';
   $summary = trim(fgets(STDIN));
 
-  echo '読書ログを登録します' . PHP_EOL;
-  echo '書籍名:' . $title . PHP_EOL;
+  $validated = validate();
 
-}
-
-$sql = <<<EOT
+  $sql = <<<EOT
 INSERT INTO reviews(
     title,
     author,
@@ -52,3 +49,4 @@ if ($result) {
 mysqli_close($link);
 
 echo 'データベースとの接続を切断しました' . PHP_EOL;
+}
