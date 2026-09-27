@@ -9,6 +9,12 @@ function validate($reviews)
   } elseif (strlen($reviews['$title'])) > 255) {
     $errors['$title'] = '書籍名は255文字以内で入力してください';
   }
+
+  //評価が正しく入力されているかチェック
+  if ($reviews['$score'] < 1 || $reviews['$score'] > 5) {
+
+  }
+ 
   return $errors;
 }
 
@@ -25,7 +31,7 @@ function createReview($link)
   $reviews['$author'] = trim(fgets(STDIN));
 
   echo '読書状況(未読、読んでる、読了):';
-  $reviews['$status'] = trim(fgets(STDIN));
+  $reviews['$status'] = (int)trim(fgets(STDIN));
 
   echo '評価(5点満点の整数):';
   $reviews['$score'] = trim(fgets(STDIN));
