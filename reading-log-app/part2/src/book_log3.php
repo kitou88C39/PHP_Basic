@@ -35,6 +35,12 @@ function createReview($link)
   $reviews['$summary'] = trim(fgets(STDIN));
 
   $validated = validate($reviews);
+  if (count($validated) > 0) {
+    foreach ($validated as $errors) {
+      echo $errors . PHP_EOL;
+    }
+    return;
+  }
 
   $sql = <<<EOT
 INSERT INTO reviews(
