@@ -12,7 +12,7 @@ function validate($reviews)
 
   //評価が正しく入力されているかチェック
   if ($reviews['$score'] < 1 || $reviews['$score'] > 5) {
-
+      $errors['$score'] = '評価は1-5の整数を入力してください';
   }
  
   return $errors;
