@@ -21,25 +21,25 @@ function validate($review)
 function createReview($link) 
 {
 
-  $reviews = [];
+  $review = [];
 
   echo '読書ログを登録してください' . PHP_EOL;
   echo '書籍名:';
-  $reviews['$title'] = trim(fgets(STDIN));
+  $review['$title'] = trim(fgets(STDIN));
 
   echo '著者名:' . PHP_EOL . PHP_EOL;
-  $reviews['$author'] = trim(fgets(STDIN));
+  $review['$author'] = trim(fgets(STDIN));
 
   echo '読書状況(未読、読んでる、読了):';
-  $reviews['$status'] = (int)trim(fgets(STDIN));
+  $review['$status'] = (int)trim(fgets(STDIN));
 
   echo '評価(5点満点の整数):';
-  $reviews['$score'] = trim(fgets(STDIN));
+  $review['$score'] = trim(fgets(STDIN));
 
   echo '感想:';
-  $reviews['$summary'] = trim(fgets(STDIN));
+  $review['$summary'] = trim(fgets(STDIN));
 
-  $validated = validate($reviews);
+  $validated = validate($review);
   if (count($validated) > 0) {
     foreach ($validated as $errors) {
       echo $errors . PHP_EOL;
@@ -55,23 +55,39 @@ INSERT INTO reviews(
     score,
     summary
 ) VALUES (
-    "{$reviews['title']}",
-    "{$reviews['author']}",
-    "{$reviews['status']}",
-    "{$reviews['score']}",
-    "{$reviews['summary']}"
+    "{$review['title']}",
+    "{$review['author']}",
+    "{$review['status']}",
+    "{$review['score']}",
+    "{$review['summary']}"
 )
 EOT;
 
   $result = mysqli_query($link, $sql);
   if ($result) {
       echo '登録が完了しました' . PHP_EOL . PHP_EOL;
-} else {
+  } else {
     echo 'Error: データベースへの追加に失敗しました' . PHP_EOL;
-    echo 'Debugging error: ' . mysqli_error($link) . PHP_EOL;
+    echo 'Debugging error: ' . mysqli_error($link) . PHP_EOL . PHP_EOL;
+  }
 }
 
-mysqli_close($link);
+function listReviews($review)
+{
+  echo '登録されている読書ログを表示します' . PHP_EOL;
+  
 
-echo 'データベースとの接続を切断しました' . PHP_EOL;
-}
+  foreach ($reviews as $review) {
+      echo '書籍名:' . $review['title'] . PHP_EOL;
+      echo '著者名:' . $review['author'] . PHP_EOL;
+      echo '読書状況:' . $review['status'] . PHP_EOL;
+      echo '評価:' . $review['score'] . PHP_EOL;
+      echo '感想:' . $review['summary'] . PHP_EOL;
+    echo PHP_EOL;
+  } elseif ($num === '9') {
+
+  // アプリケーションを終了
+      echo 'アプリケーションを終了します' . PHP_EOL;
+      break;
+  }
+
