@@ -6,11 +6,10 @@ function validate($reviews)
   //書籍名が正しく入力されているかチェック
   if(!strlen($reviews['$title'])){
     $errors['$title'] = '書籍名を入力してください';
+  } elseif (strlen($reviews['$title'])) > 255) {
+    $errors['$title'] = '書籍名は255文字以内で入力してください';
   }
   return $errors;
-} elseif (strlen($reviews['$title'])) >
-255) {
-    $errors['$title'] = '書籍名は255文字以内で入力してください';
 }
 
 function createReview($link) 
@@ -58,10 +57,9 @@ INSERT INTO reviews(
 )
 EOT;
 
-$result = mysqli_query($link, $sql);
-
-if ($result) {
-    echo 'データベースに追加しました' . PHP_EOL;
+  $result = mysqli_query($link, $sql);
+  if ($result) {
+      echo '登録が完了しました' . PHP_EOL . PHP_EOL;
 } else {
     echo 'Error: データベースへの追加に失敗しました' . PHP_EOL;
     echo 'Debugging error: ' . mysqli_error($link) . PHP_EOL;
