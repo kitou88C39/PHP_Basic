@@ -2,7 +2,11 @@
 
 function validate($reviews)
 {
-
+  $errors = [];
+  //書籍名が正しく入力されているかチェック
+  if(!strlen($reviews['$title']))
+  
+  return $errors;
 }
 
 function createReview($link)
@@ -26,7 +30,7 @@ function createReview($link)
   echo '感想:';
   $reviews['$summary'] = trim(fgets(STDIN));
 
-  //$validated = validate($reviews);
+  $validated = validate($reviews);
 
   $sql = <<<EOT
 INSERT INTO reviews(
