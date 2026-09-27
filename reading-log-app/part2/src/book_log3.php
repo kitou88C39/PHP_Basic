@@ -4,12 +4,16 @@ function validate($reviews)
 {
   $errors = [];
   //書籍名が正しく入力されているかチェック
-  if(!strlen($reviews['$title']))
-  
+  if(!strlen($reviews['$title'])){
+    $errors['$title'] = '書籍名を入力してください';
+  }
   return $errors;
+} elseif (strlen($reviews['$title'])) >
+255) {
+    $errors['$title'] = '書籍名は255文字以内で入力してください';
 }
 
-function createReview($link)
+function createReview($link) 
 {
 
   $reviews = [];
