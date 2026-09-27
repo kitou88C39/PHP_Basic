@@ -1,17 +1,17 @@
 <?php
 
-function validate($reviews)
+function validate($review)
 {
   $errors = [];
   //書籍名が正しく入力されているかチェック
-  if(!strlen($reviews['$title'])){
+  if(!strlen($review['$title'])){
     $errors['$title'] = '書籍名を入力してください';
-  } elseif (strlen($reviews['$title'])) > 255) {
+  } elseif (strlen($review['$title'])) > 255) {
     $errors['$title'] = '書籍名は255文字以内で入力してください';
   }
 
   //評価が正しく入力されているかチェック
-  if ($reviews['$score'] < 1 || $reviews['$score'] > 5) {
+  if ($review['$score'] < 1 || $review['$score'] > 5) {
       $errors['$score'] = '評価は1-5の整数を入力してください';
   }
  
