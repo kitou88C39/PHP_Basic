@@ -36,11 +36,11 @@ INSERT INTO reviews(
     score,
     summary
 ) VALUES (
-    "{$title}",
-    "{$author}",
-    "{$status}",
-    "{$score}",
-    "{$summary}"
+    "{$reviews['title']}",
+    "{$reviews['author']}",
+    "{$reviews['status']}",
+    "{$reviews['score']}",
+    "{$reviews['summary']}"
 )
 EOT;
 
