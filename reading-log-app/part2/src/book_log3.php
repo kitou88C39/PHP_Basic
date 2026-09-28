@@ -74,12 +74,9 @@ function listReviews($reviews)
         echo '読書状況:' . $review['status'] . PHP_EOL;
         echo '評価:' . $review['score'] . PHP_EOL;
         echo '感想:' . $review['summary'] . PHP_EOL;
-        echo PHP_EOL;
+        echo '----------------------------' . PHP_EOL;
     }
-} elseif ($num === '9') {
-    // アプリケーションを終了
-    echo 'アプリケーションを終了します' . PHP_EOL;
-    break;
 }
+
 
 
