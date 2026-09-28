@@ -13,6 +13,10 @@ echo 'データベースに接続できました' . PHP_EOL;
 $sql = 'SELECT name, founder FROM companies';
 $results = mysqli_query($link, $sql); 
 
+while ($company = mysqli_fetct_assoc($results)){
+    var_export($company);
+}
+
 // $sql = <<<EOT
 // INSERT INTO companies(
 //     name,
