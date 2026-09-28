@@ -10,27 +10,28 @@ if (!$link) {
 
 echo 'データベースに接続できました' . PHP_EOL;
 
-$sql = <<<EOT
-INSERT INTO companies(
-    name,
-    establishment_date,
-    founder
-) VALUES (
-    'SmartHR Inc',
-    '2023-01-25',
-    'Shoji Miyata'
-)
-EOT;
+$sql = 'SELECT name, founder FROM companies';
+$results = mysqli_query($link, $sql); 
 
-$result = mysqli_query($link, $sql);
+// $sql = <<<EOT
+// INSERT INTO companies(
+//     name,
+//     establishment_date,
+//     founder
+// ) VALUES (
+//     'SmartHR Inc',
+//     '2023-01-25',
+//     'Shoji Miyata'
+// )
+// EOT;
 
-if ($result) {
-    echo 'データベースに追加しました' . PHP_EOL;
-} else {
-    echo 'Error: データベースへの追加に失敗しました' . PHP_EOL;
-    echo 'Debugging error: ' . mysqli_error($link) . PHP_EOL;
-}
+// $result = mysqli_query($link, $sql);
+// if ($result) {
+//     echo 'データベースに追加しました' . PHP_EOL;
+// } else {
+//     echo 'Error: データベースへの追加に失敗しました' . PHP_EOL;
+//     echo 'Debugging error: ' . mysqli_error($link) . PHP_EOL;
+// }
 
 mysqli_close($link);
-
 echo 'データベースとの接続を切断しました' . PHP_EOL;
