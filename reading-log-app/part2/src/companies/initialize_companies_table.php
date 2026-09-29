@@ -10,9 +10,10 @@ function dbConnect()
     }
 }
 
-function dropTable()
+function dropTable($link)
 {
-
+    $dropTableSql = 'DROP TABLE IF EXISTS companies;';
+    $result = mysqli_query($link, $dropTableSql);
 }
 
 function createTable()
