@@ -96,6 +96,7 @@ function listReviews($reviews)
         echo '感想:' . $review['summary'] . PHP_EOL;
         echo '----------------------------' . PHP_EOL;
     }
+    mysqli_free_result($results);
 }
 
 function dbConnect()
