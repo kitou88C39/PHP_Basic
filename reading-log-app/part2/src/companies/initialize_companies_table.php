@@ -1,11 +1,14 @@
 <?php
 
-require __DIR__ . '/vender/autoload.php';
+require __DIR__ . '/../vender/autoload.php';
 
 function dbConnect()
 {
-    $dotenv = Dotnenv\Dotnenv::createImmutable(__DIR__);
+    $dotenv = Dotnenv\Dotnenv::createImmutable(__DIR__ . '/..');
     $dotenv->load();
+
+    $dbHost = getnev('DB_HOST');
+    var_dump();
 
     $link = mysqli_connect('db', 'book_log', 'pass', 'book_log');
     if (!$link) {
