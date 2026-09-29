@@ -21,6 +21,11 @@ function validate($review)
         $errors['status'] = '読書状況は「未読」「読んでる」「読了」のいずれかを入力してください';
     }
 
+    //評価が正しく入力されているかチェック
+    if($review['score'] < 1 || $review['score'] > 5){
+       $errors['score'] = '評価は1-5の整数を入力してください';
+    }
+
     return $errors;
 }
 
