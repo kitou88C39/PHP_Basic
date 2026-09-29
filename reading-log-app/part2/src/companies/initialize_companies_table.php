@@ -35,9 +35,9 @@ CREATE TABLE companies (
 EOT;
     $result = mysqli_query($link, $createTableSql);
     if ($result) {
-        echo 'テーブルを削除しました' . PHP_EOL;
+        echo 'テーブルを作成しました' . PHP_EOL;
     } else {
-        echo 'Error: テーブルの削除に失敗しました' . PHP_EOL;
+        echo 'Error: テーブルの作成に失敗しました' . PHP_EOL;
         echo 'Debugging error: ' . mysqli_error($link) . PHP_EOL;
     }
 }
@@ -45,4 +45,5 @@ EOT;
 $link = doConnect();
 dropTable($link);
 createTable($link);
+mysqli_close($link);
 
