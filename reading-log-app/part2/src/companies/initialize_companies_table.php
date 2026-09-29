@@ -1,7 +1,12 @@
 <?php
 
+require __DIR__ . '/vender/autoload.php';
+
 function dbConnect()
 {
+    $dotenv = Dotnenv\Dotnenv::createImmutable(__DIR__);
+    $dotenv->load();
+
     $link = mysqli_connect('db', 'book_log', 'pass', 'book_log');
     if (!$link) {
         echo 'Error: データベースに接続できません' . PHP_EOL;
