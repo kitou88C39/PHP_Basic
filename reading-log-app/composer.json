@@ -1,0 +1,15 @@
+{
+    "name": "kitoumasaomi/reading-log-ap",
+    "autoload": {
+        "psr-4": {
+            "Kitoumasaomi\\ReadingLogAp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "kitoumasaomi",
+            "email": "kanfutrooper@gmail.com"
+        }
+    ],
+    "require": {}
+}
