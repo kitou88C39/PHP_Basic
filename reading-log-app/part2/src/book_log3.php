@@ -16,6 +16,11 @@ function validate($review)
         $errors['author'] = '著者名は100文字以内で入力してください';
     }
 
+    //読書状況が正しく入力されているかチェック
+    if (!in_array($review['status'],['未読','読んでる','読了'],true)){
+        $errors['status'] = '読書状況は「未読」「読んでる」「読了」のいずれかを入力してください';
+    }
+
     return $errors;
 }
 
