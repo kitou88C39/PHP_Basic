@@ -10,8 +10,10 @@ function validate($review)
     }
 
     //評価が正しく入力されているかチェック
-    if ($review['$score'] < 1 || $review['$score'] > 5) {
-        $errors['$score'] = '評価は1-5の整数を入力してください';
+    if (!strlen($review['author'])) {
+        $errors['author'] = '著者名を入力してください';
+    } elseif (strlen($review['$author'])) > 100) {
+        $errors['author'] = '著者名は100文字以内で入力してください';
     }
 
     return $errors;
