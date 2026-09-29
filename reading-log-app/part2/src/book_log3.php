@@ -22,8 +22,10 @@ function validate($review)
     }
 
     //評価が正しく入力されているかチェック
-    if($review['score'] < 1 || $review['score'] > 5){
-       $errors['score'] = '評価は1-5の整数を入力してください';
+    if (!strlen($review['summary'])) {
+        $errors['summary'] = '感想を入力してください';
+    } elseif (strlen($review['$summary'])) > 1000) {
+        $errors['summary'] = '感想は1000文字以内で入力してください';
     }
 
     return $errors;
