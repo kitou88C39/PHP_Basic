@@ -18,5 +18,10 @@
       <label for="establishment_date">設立日</label>
       <input type="date" id="establishment_date" name="establishment_date"> 
     </div>
+    <div>
+      <label for="founder">代表者</label>
+      <input type="text" id="founder" name="founder"> 
+    </div>
+    <button type="submit">登録する</button>
 </body>
 </html>
